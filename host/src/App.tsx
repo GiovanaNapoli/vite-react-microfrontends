@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-// @ts-expect-error
 import AuthModule from "authModule/App";
 
 function App() {
