@@ -7,9 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "app",
-      remotes: {
-        authModule: "http://localhost:5001/assets/remoteEntry.js",
+      name: "remote_b",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./App": "./src/App",
       },
       shared: ["react", "react-dom"],
     }),
