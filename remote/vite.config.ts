@@ -11,8 +11,9 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/App",
+        "./store": "./src/store",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "jotai"],
     }),
   ],
   build: {

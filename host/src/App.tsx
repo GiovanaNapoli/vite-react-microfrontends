@@ -1,15 +1,15 @@
-import { useState } from "react";
 import "./App.css";
 import AuthModule from "authModule/App";
+import useStore from "authModule/store";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useStore(0);
 
   return (
     <>
       <h1>Host</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((count: number) => count + 1)}>
           count is {count}
         </button>
       </div>
